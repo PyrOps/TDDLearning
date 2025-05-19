@@ -11,7 +11,7 @@ namespace Palindrome {
     public void ShortPalindromeStringReturnsTrue() {
       string input = "";
       Palindrome p = new();
-      Assert.False(p.IsPalindrome(input));
+      Assert.True(p.IsPalindrome(input));
     }
   }
 

@@ -42,14 +42,15 @@ namespace Palindrome {
       if (string.IsNullOrEmpty(input)) return false;
       int startIndex = 0;
       int endIndex = input.Length - 1;
+      int offset = 1;
       if (input[startIndex] != input[endIndex]) return false;
-      startIndex = 1;
-      endIndex = input.Length - 2;
+      startIndex += offset;
+      endIndex -= offset;
       if (startIndex < input.Length) {
         if (input[startIndex] != input[endIndex]) return false;
       }
-      startIndex = 2;
-      endIndex = input.Length - 3;
+      startIndex += offset;
+      endIndex -= offset;
       if (startIndex < input.Length) {
         if (input[startIndex] != input[endIndex]) return false;
       }

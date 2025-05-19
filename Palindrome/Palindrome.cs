@@ -10,7 +10,7 @@ namespace Palindrome {
 
   public class Palindrome {
     public bool IsPalindrome(string input) {
-      throw new NotImplementedException();
+      return false;
     }
   }
 }

@@ -37,8 +37,20 @@ namespace Palindrome {
     }
 
     [Fact]
-    public void SimpleShortNonPalindromeStringReturnsTrue() {
+    public void SimpleShortPalindromeStringReturnsTrue() {
       string input = "abccba";
+      Assert.True(Palindrome.IsPalindrome(input));
+    }
+
+    [Fact]
+    public void ComplexLongNonPalindromeStringReturnsFalse() {
+      string input = "TDD is really cool";
+      Assert.False(Palindrome.IsPalindrome(input));
+    }
+
+    [Fact]
+    public void LongPalindromeStringReturnsTrue() {
+      string input = "Engage le jeu que je le gagne";
       Assert.True(Palindrome.IsPalindrome(input));
     }
   }

@@ -40,9 +40,10 @@ namespace Palindrome {
   public class Palindrome {
     public static bool IsPalindrome(string input) {
       if (string.IsNullOrEmpty(input)) return false;
-      int startIndex = 0;
-      int endIndex = input.Length - 1;
+      int startIndex, endIndex;
       int offset = 1;
+      startIndex = 0;
+      endIndex = input.Length - 1;
       if (input[startIndex] != input[endIndex]) return false;
       startIndex += offset;
       endIndex -= offset;

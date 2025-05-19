@@ -17,6 +17,12 @@ namespace Palindrome {
       string input = "abcdef";
       Assert.False(Palindrome.IsPalindrome(input));
     }
+
+    [Fact]
+    public void LongNonPalindromeStringReturnsFalse() {
+      string input = "abcdefghijklmnopqrstuvwxyz";
+      Assert.False(Palindrome.IsPalindrome(input));
+    }
   }
 
   public class Palindrome {

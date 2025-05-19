@@ -9,7 +9,7 @@ namespace Palindrome {
 
     [Fact]
     public void ShortPalindromeStringReturnsTrue() {
-      string input = "";
+      string input = "aa";
       Palindrome p = new();
       Assert.True(p.IsPalindrome(input));
     }

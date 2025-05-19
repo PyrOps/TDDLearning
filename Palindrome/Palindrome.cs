@@ -46,6 +46,9 @@ namespace Palindrome {
       startIndex = 1;
       endIndex = input.Length - 2;
       if (input[startIndex] != input[endIndex]) return false;
+      startIndex = 2;
+      endIndex = input.Length - 3;
+      if (input[startIndex] != input[endIndex]) return false;
       return true;
     }
   }

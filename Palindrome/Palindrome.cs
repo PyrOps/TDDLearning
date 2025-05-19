@@ -35,6 +35,12 @@ namespace Palindrome {
       string input = "abcdba";
       Assert.False(Palindrome.IsPalindrome(input));
     }
+
+    [Fact]
+    public void SimpleShortNonPalindromeStringReturnsTrue() {
+      string input = "abccba";
+      Assert.True(Palindrome.IsPalindrome(input));
+    }
   }
 
   public class Palindrome {

@@ -35,6 +35,7 @@ namespace Palindrome {
     public static bool IsPalindrome(string input) {
       if (string.IsNullOrEmpty(input)) return false;
       if (input[0] != input[^1]) return false;
+      if (input[1] != input[^2]) return false;
       return true;
     }
   }

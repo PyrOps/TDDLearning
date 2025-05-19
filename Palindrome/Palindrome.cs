@@ -6,6 +6,13 @@ namespace Palindrome {
       Palindrome p = new();
       Assert.False(p.IsPalindrome(input));
     }
+
+    [Fact]
+    public void ShortPalindromeStringReturnsTrue() {
+      string input = "";
+      Palindrome p = new();
+      Assert.False(p.IsPalindrome(input));
+    }
   }
 
   public class Palindrome {

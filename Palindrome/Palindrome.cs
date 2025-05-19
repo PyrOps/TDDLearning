@@ -44,18 +44,10 @@ namespace Palindrome {
       int offset = 1;
       startIndex = 0;
       endIndex = input.Length - 1;
-      if (startIndex < input.Length) {
+      while (startIndex < input.Length) {
         if (input[startIndex] != input[endIndex]) return false;
-      }
-      startIndex += offset;
-      endIndex -= offset;
-      if (startIndex < input.Length) {
-        if (input[startIndex] != input[endIndex]) return false;
-      }
-      startIndex += offset;
-      endIndex -= offset;
-      if (startIndex < input.Length) {
-        if (input[startIndex] != input[endIndex]) return false;
+        startIndex += offset;
+        endIndex -= offset;
       }
       return true;
     }

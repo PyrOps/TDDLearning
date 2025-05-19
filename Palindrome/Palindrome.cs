@@ -34,8 +34,12 @@ namespace Palindrome {
   public class Palindrome {
     public static bool IsPalindrome(string input) {
       if (string.IsNullOrEmpty(input)) return false;
-      if (input[0] != input[^1]) return false;
-      if (input[1] != input[^2]) return false;
+      int startIndex = 0;
+      int endIndex = input.Length - 1;
+      if (input[startIndex] != input[endIndex]) return false;
+      startIndex = 1;
+      endIndex = input.Length - 2;
+      if (input[startIndex] != input[endIndex]) return false;
       return true;
     }
   }

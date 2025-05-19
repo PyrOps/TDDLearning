@@ -3,20 +3,18 @@ namespace Palindrome {
     [Fact]
     public void EmptyStringReturnsFalse() {
       string input = "";
-      Palindrome p = new();
-      Assert.False(p.IsPalindrome(input));
+      Assert.False(Palindrome.IsPalindrome(input));
     }
 
     [Fact]
     public void ShortPalindromeStringReturnsTrue() {
       string input = "aa";
-      Palindrome p = new();
-      Assert.True(p.IsPalindrome(input));
+      Assert.True(Palindrome.IsPalindrome(input));
     }
   }
 
   public class Palindrome {
-    public bool IsPalindrome(string input) {
+    public static bool IsPalindrome(string input) {
       if (string.IsNullOrEmpty(input)) return false;
       return true;
     }

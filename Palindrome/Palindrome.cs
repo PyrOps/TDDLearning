@@ -17,7 +17,8 @@ namespace Palindrome {
 
   public class Palindrome {
     public bool IsPalindrome(string input) {
-      return false;
+      if (string.IsNullOrEmpty(input)) return false;
+      return true;
     }
   }
 }

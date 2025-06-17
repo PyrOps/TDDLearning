@@ -21,11 +21,17 @@ namespace Ytreza.fizzbuzz {
 
   // Step 2 : Test writing
   // 1. FizzBuzz(0)
+  // 2. FizzBuzz(1)
 
   public class FizzBuzzTest {
     [Fact]
     public void TestFizzBuzzZero() {
       Assert.Equal("0", FizzBuzz.Check(0));
+    }
+
+    [Fact]
+    public void TestFizzBuzzOne() {
+      Assert.Equal("1", FizzBuzz.Check(1));
     }
   }
 

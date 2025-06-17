@@ -51,6 +51,11 @@ namespace Ytreza.fizzbuzz {
     public void TestFizzBuzzSix() {
       Assert.Equal("fizz", FizzBuzz.Check(6));
     }
+
+    [Fact]
+    public void TestFizzBuzzNine() {
+      Assert.Equal("fizz", FizzBuzz.Check(9));
+    }
   }
 
   public class FizzBuzz {

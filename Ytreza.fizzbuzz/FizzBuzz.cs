@@ -2,9 +2,9 @@ namespace Ytreza.fizzbuzz {
   //
   // Step 1 : Test list
   // - Covering non fizzbuzz values
-  //    FizzBuzz(0)
   //    FizzBuzz(1)
   //    FizzBuzz(2)
+  //    FizzBuzz(4)
   // - Covering fizz values (multiples of 3)
   //    FizzBuzz(3)
   //    FizzBuzz(6)
@@ -13,16 +13,16 @@ namespace Ytreza.fizzbuzz {
   //    FizzBuzz(5)
   //    FizzBuzz(10)
   //    FizzBuzz(20)
-  // - Covering fizzbuzz values multiples of 15)
+  // - Covering fizzbuzz values (multiples of 15)
   //    FizzBuzz(15)
   //    FizzBuzz(30)
-  //    FizzBuzz(45)
+  //    FizzBuzz(0)
   //
 
   // Step 2 : Test writing
-  // 1. FizzBuzz(0)
-  // 2. FizzBuzz(1)
-  // 3. FizzBuzz(2)
+  // 1. FizzBuzz(1)
+  // 2. FizzBuzz(2)
+  // 3. FizzBuzz(4)
   // 4. FizzBuzz(3)
   // 5. FizzBuzz(6)
   // 6. FizzBuzz(9)
@@ -31,14 +31,9 @@ namespace Ytreza.fizzbuzz {
   // 9. FizzBuzz(20)
   // 10. FizzBuzz(15)
   // 11. FizzBuzz(30)
-  // 12. FizzBuzz(45)
+  // 12. FizzBuzz(0)
 
   public class FizzBuzzTest {
-    [Fact]
-    public void TestFizzBuzzZero() {
-      Assert.Equal("0", FizzBuzz.Check(0));
-    }
-
     [Fact]
     public void TestFizzBuzzOne() {
       Assert.Equal("1", FizzBuzz.Check(1));
@@ -47,6 +42,11 @@ namespace Ytreza.fizzbuzz {
     [Fact]
     public void TestFizzBuzzTwo() {
       Assert.Equal("2", FizzBuzz.Check(2));
+    }
+
+    [Fact]
+    public void TestFizzBuzzFour() {
+      Assert.Equal("4", FizzBuzz.Check(0));
     }
 
     [Fact]
@@ -90,14 +90,14 @@ namespace Ytreza.fizzbuzz {
     }
 
     [Fact]
-    public void TestFizzBuzzFortyFive() {
-      Assert.Equal("fizzbuzz", FizzBuzz.Check(45));
+    public void TestFizzBuzzZero() {
+      Assert.Equal("fizzbuzz", FizzBuzz.Check(0));
     }
   }
 
   public class FizzBuzz {
     public static string Check(int value) {
-      if (value == 15 || value == 30 || value == 45) return "fizzbuzz";
+      if (value != 0 && value % 15 == 0) return "fizzbuzz";
       if (value != 0 && value % 5 == 0) return "buzz";
       if (value != 0 && value % 3 == 0) return "fizz";
       return value.ToString();

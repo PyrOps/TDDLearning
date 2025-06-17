@@ -37,7 +37,8 @@ namespace Ytreza.fizzbuzz {
 
   public class FizzBuzz {
     public static string Check(int value) {
-      return "0";
+      if (value == 0) return "0";
+      else return "1";
     }
   }
 }

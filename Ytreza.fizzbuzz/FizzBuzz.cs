@@ -49,13 +49,7 @@ namespace Ytreza.fizzbuzz {
 
   public class FizzBuzz {
     public static string Check(int value) {
-      // As we always return the value converted to string, whatever the value is, let's refactor this
-      /*
-      if (value == 0) return "0";
-      else if (value == 1) return "1";
-      else return "2";
-      */
-      // to this
+      if (value == 3) return "fizz";
       return value.ToString();
     }
   }

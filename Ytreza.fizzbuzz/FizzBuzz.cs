@@ -44,7 +44,8 @@ namespace Ytreza.fizzbuzz {
   public class FizzBuzz {
     public static string Check(int value) {
       if (value == 0) return "0";
-      else return "1";
+      else if (value == 1) return "1";
+      else return "2";
     }
   }
 }

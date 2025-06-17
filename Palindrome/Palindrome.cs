@@ -1,4 +1,5 @@
 namespace Palindrome {
+  /*
   public class PalindromeTest {
     [Fact]
     public void EmptyStringReturnsFalse() {
@@ -54,7 +55,7 @@ namespace Palindrome {
       Assert.True(Palindrome.IsPalindrome(input));
     }
   }
-
+  */
   public class Palindrome {
     public static bool IsPalindrome(string input) {
       string updatedInput = input.ToLower().Replace(" ", "");

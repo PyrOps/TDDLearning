@@ -99,8 +99,12 @@ namespace Ytreza.fizzbuzz {
     public static string Check(int value) {
       if (value % 15 == 0) return "fizzbuzz";
       if (value % 5 == 0) return "buzz";
-      if (value % 3 == 0) return "fizz";
+      if (IsMultipleOfThree(value)) return "fizz";
       return value.ToString();
+    }
+
+    public static bool IsMultipleOfThree(int value) {
+      return value % 3 == 0;
     }
   }
 }

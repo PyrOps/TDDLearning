@@ -60,7 +60,12 @@ namespace Ytreza.fizzbuzz {
 
   public class FizzBuzz {
     public static string Check(int value) {
+      // As all multiple of 3 must return "fizz", we can refactor this
+      /*
       if (value == 3 || value == 6 || value == 9) return "fizz";
+      */
+      // to this
+      if (value % 3 == 0) return "fizz";
       return value.ToString();
     }
   }

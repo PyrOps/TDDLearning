@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace Ytreza.fizzbuzz {
   //
   // Step 1 : Test list
@@ -97,10 +99,14 @@ namespace Ytreza.fizzbuzz {
 
   public class FizzBuzz {
     public static string Check(int value) {
-      if (IsMultipleOfThree(value) && IsMultipleOfFive(value)) return "fizzbuzz";
-      if (IsMultipleOfFive(value)) return "buzz";
-      if (IsMultipleOfThree(value)) return "fizz";
-      return value.ToString();
+      StringBuilder sb = new();
+      if (!IsMultipleOfThree(value) && !IsMultipleOfFive(value))
+        sb.Append(value.ToString());
+      else {
+        if (IsMultipleOfThree(value)) sb.Append("fizz");
+        if (IsMultipleOfFive(value)) sb.Append("buzz");
+      }
+      return sb.ToString();
     }
 
     public static bool IsMultipleOfThree(int value) {

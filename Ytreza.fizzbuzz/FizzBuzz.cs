@@ -30,5 +30,8 @@ namespace Ytreza.fizzbuzz {
   }
 
   public class FizzBuzz {
+    public static string Check(int value) {
+      throw new NotImplementedException();
+    }
   }
 }

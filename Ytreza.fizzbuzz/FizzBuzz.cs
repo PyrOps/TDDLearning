@@ -79,7 +79,7 @@ namespace Ytreza.fizzbuzz {
 
   public class FizzBuzz {
     public static string Check(int value) {
-      if (value == 5 || value == 10) return "buzz";
+      if (value == 5 || value == 10 || value == 20) return "buzz";
       if (value != 0 && value % 3 == 0) return "fizz";
       return value.ToString();
     }

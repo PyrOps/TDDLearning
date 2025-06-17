@@ -25,6 +25,8 @@ namespace Ytreza.fizzbuzz {
   // 3. FizzBuzz(2)
   // 4. FizzBuzz(3)
   // 5. FizzBuzz(6)
+  // 6. FizzBuzz(9)
+  // 7. FizzBuzz(5)
 
   public class FizzBuzzTest {
     [Fact]
@@ -55,6 +57,11 @@ namespace Ytreza.fizzbuzz {
     [Fact]
     public void TestFizzBuzzNine() {
       Assert.Equal("fizz", FizzBuzz.Check(9));
+    }
+
+    [Fact]
+    public void TestFizzBuzzFive() {
+      Assert.Equal("buzz", FizzBuzz.Check(5));
     }
   }
 

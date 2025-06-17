@@ -65,7 +65,7 @@ namespace Ytreza.fizzbuzz {
       if (value == 3 || value == 6 || value == 9) return "fizz";
       */
       // to this
-      if (value % 3 == 0) return "fizz";
+      if (value != 0 && value % 3 == 0) return "fizz";
       return value.ToString();
     }
   }

@@ -46,7 +46,7 @@ namespace Ytreza.fizzbuzz {
 
     [Fact]
     public void TestFizzBuzzFour() {
-      Assert.Equal("4", FizzBuzz.Check(0));
+      Assert.Equal("4", FizzBuzz.Check(4));
     }
 
     [Fact]

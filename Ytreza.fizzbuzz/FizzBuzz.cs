@@ -97,7 +97,7 @@ namespace Ytreza.fizzbuzz {
 
   public class FizzBuzz {
     public static string Check(int value) {
-      if (value % 15 == 0) return "fizzbuzz";
+      if (IsMultipleOfThree(value) && IsMultipleOfFive(value)) return "fizzbuzz";
       if (IsMultipleOfFive(value)) return "buzz";
       if (IsMultipleOfThree(value)) return "fizz";
       return value.ToString();
